@@ -1,9 +1,7 @@
 # Orbital Mechanics Simulation System
 
 ## Description
-This project implements a physics-based orbital simulation using numerical integration.  
-It models two-body orbital motion and exposes the simulation through a FastAPI backend with an interactive Streamlit UI.  
-The backend is containerized with Docker for reproducible deployment.
+This project simulates two-body orbital motion using RK4 numerical integration and exposes the simulation through a FastAPI backend with an interactive Streamlit interface.
 
 ---
 
@@ -94,7 +92,8 @@ Returns arrays of x and y positions representing the orbital trajectory.
 ## How It Works
 - State = [x, y, vx, vy]  
 - Gravity determines acceleration  
-- Numerical integration predicts the position of the system forward in time  
+- Numerical integration predicts the position of the system forward in time
+- The system integrates the equations of motion using a fourth-order Runge-Kutta method for improved numerical stability and accuracy  
 - Output is trajectory over time  
 
 ---
